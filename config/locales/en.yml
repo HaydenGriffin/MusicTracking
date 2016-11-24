@@ -1,0 +1,48 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  app_title: Music Tracker
+  app_description: A place where you can keep track of all your music.
+
+  home:
+    home:
+      title: Track Your Music
+      welcome: This is the space to track your sick beats mateys.
+
+    contact:
+      title: Contact us
+      contact_us: Complete the following form to get in touch with us.
+
+      name: "Name:"
+      enter_name: Enter your name
+      email: "Email:"
+      enter_email: Enter your email address
+      telephone: "Telephone:"
+      enter_telephone: Enter your telephone number
+      message: "Message:"
+      enter_message: What do you want to say?
+      submit: Contact Us
+
+    request_contact:
+      no_name: You must supply a name.
+      no_email: You must supply an email address.
+      email_sent: Thank you. We will be in touch shortly.
