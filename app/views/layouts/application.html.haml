@@ -31,6 +31,4 @@
           %a{:href => "/contact"} Contact
 
   .container
-    - flash.each do |key, value|
-      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
     = yield
