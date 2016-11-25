@@ -17,7 +17,7 @@
         %td= song.name
         %td= song.track
         %td= song.length
-        %td= song.album
+        %td= song.album.name
         %td= link_to 'Show', song
         %td= link_to 'Edit', edit_song_path(song)
         %td= link_to 'Destroy', song, :method => :delete, :data => { :confirm => 'Are you sure?' }
