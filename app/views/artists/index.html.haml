@@ -6,19 +6,19 @@
   %thead
     %tr
       %th= model_class.human_attribute_name(:name)
+      %th= model_class.human_attribute_name(:albums)
       %th= model_class.human_attribute_name(:genre)
       %th= model_class.human_attribute_name(:start)
       %th= model_class.human_attribute_name(:bio)
-      %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', default: t("helpers.actions")
   %tbody
     - @artists.each do |artist|
       %tr
         %td= artist.name
+        %td= artist.albums.map(&:name).join(",<br>").html_safe
         %td= artist.genre
         %td= artist.start
         %td= artist.bio
-        %td=l artist.created_at, format: :short
         %td
           = link_to artist_path(artist), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do
             = glyph 'info-sign'

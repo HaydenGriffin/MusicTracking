@@ -5,18 +5,18 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:name)
       %th= model_class.human_attribute_name(:artist_id)
+      %th= model_class.human_attribute_name(:album)
+      %th= model_class.human_attribute_name(:songs)
       %th= model_class.human_attribute_name(:year)
-      %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', default: t("helpers.actions")
   %tbody
     - @albums.each do |album|
       %tr
-        %td= album.name
         %td= album.artist.name
+        %td= album.name
+        %td= album.songs.map(&:name).join(",<br>").html_safe
         %td= album.year
-        %td=l album.created_at, format: :short
         %td
           = link_to album_path(album), class: 'btn btn-xs', title: "#{ t('.show', default: t('helpers.links.show')) }" do
             = glyph 'info-sign'

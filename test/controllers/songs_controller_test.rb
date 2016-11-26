@@ -17,7 +17,7 @@ class SongsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create song" do
     assert_difference('Song.count') do
-      post songs_url, params: { song: { album_id: @song.album_id, length: @song.length, name: @song.name, track: @song.track } }
+      post songs_url, params: { song: { album_id: @song.album_id, length: @song.length, name: @song.name, track: 5 } }
     end
 
     assert_redirected_to song_url(Song.last)

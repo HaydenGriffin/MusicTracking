@@ -3,11 +3,11 @@
 one:
   name: MyString
   track: 1
-  length: 1
+  length: '3:10'
   album: one
 
 two:
   name: MyString
-  track: 1
-  length: 1
+  track: 2
+  length: '3:30'
   album: two
