@@ -21,7 +21,7 @@ class HomeController < ApplicationController
 			flash[:danger] = I18n.t('home.request_contact.no_message')
 		else
 		  ContactMailer.contact_email(email, name, telephone, message).deliver_now
-		  flash[:success] = "Thank you. We will be in touch shortly."
+		  flash[:success] = I18n.t('home.request_contact.message_sent')
 		end
 		redirect_to contact_path
 	end

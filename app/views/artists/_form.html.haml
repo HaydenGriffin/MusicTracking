@@ -1,4 +1,4 @@
-= form_for @artist do |f|
+= form_for @artist, html: { class: 'form-horizontal' } do |f|
   - if @artist.errors.any?
     #error_explanation
       %h2= "#{pluralize(@artist.errors.count, "error")} prohibited this artist from being saved:"
@@ -6,17 +6,23 @@
         - @artist.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :start
-    = f.number_field :start
-  .field
-    = f.label :genre
-    = f.text_field :genre
-  .field
-    = f.label :bio
-    = f.text_area :bio
-  .actions
-    = f.submit 'Save'
+  .form-group
+    = f.label :name, class: 'control-label col-md-2'
+    .col-md-8
+      = f.text_field :name, class: 'text_field form-control'
+  .form-group
+    = f.label :start, class: 'control-label col-md-2'
+    .col-md-8
+      = f.number_field :start, class: 'number_field form-control'
+  .form-group
+    = f.label :genre, class: 'control-label col-md-2'
+    .col-md-8
+      = f.text_field :genre, class: 'text_field form-control'
+  .form-group
+    = f.label :bio, class: 'control-label col-md-2'
+    .col-md-8
+      = f.text_area :bio, class: 'text_area form-control'
+  .form-group
+    .col-md-offset-2.col-md-8
+      = f.submit nil, class: 'btn btn-primary'
+      = link_to t('.cancel', default: t("helpers.links.cancel")), artists_path, class: 'btn btn-default'

@@ -1,7 +1,4 @@
-%h1 Editing artist
-
-= render 'form'
-
-= link_to 'Show', @artist
-\|
-= link_to 'Back', artists_path
+- model_class = Artist
+.page-header
+  %h1=t '.title', default: [:'helpers.titles.edit', 'Edit %{model}'], model: model_class.model_name.human.titleize
+= render partial: "form"

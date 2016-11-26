@@ -47,4 +47,4 @@ en:
       no_email: You must supply an email address.
       no_number: You must supply a phone number.
       no_message: You must supply a message.
-      email_sent: Thank you. We will be in touch shortly.
+      message_sent: Thank you. We will be in touch shortly.
