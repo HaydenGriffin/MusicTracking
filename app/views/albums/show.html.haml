@@ -4,6 +4,9 @@
   %h1=t '.title', default: model_class.model_name.human.titleize
 .fieldset
   %dl
+    %dd
+    %dt
+      =image_tag @album.artwork.url(:medium)
     %dt.label.label-default= model_class.human_attribute_name(:name)
     %dd
       %pre.prettyprint= @album.name

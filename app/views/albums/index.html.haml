@@ -5,6 +5,7 @@
 %table.table.table-striped
   %thead
     %tr
+      %th= model_class.human_attribute_name(:artwork)
       %th= model_class.human_attribute_name(:artist_id)
       %th= model_class.human_attribute_name(:album)
       %th= model_class.human_attribute_name(:songs)
@@ -13,6 +14,7 @@
   %tbody
     - @albums.each do |album|
       %tr
+        %td= image_tag album.artwork.url(:thumb)
         %td= album.artist.name
         %td= album.name
         %td= album.songs.map(&:name).join(",<br>").html_safe
