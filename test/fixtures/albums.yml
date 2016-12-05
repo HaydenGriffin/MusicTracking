@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  year: 1
+  year: 2000
   artist: one
 
 two:
   name: MyString
-  year: 1
+  year: 2000
   artist: two

@@ -8,6 +8,7 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get albums_url
     assert_response :success
+    assert_not_nil assigns(:albums)
   end
 
   test "should get new" do

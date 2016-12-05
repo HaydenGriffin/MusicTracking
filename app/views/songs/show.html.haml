@@ -15,7 +15,7 @@
       %pre.prettyprint= @song.length
     %dt.label.label-default= model_class.human_attribute_name(:album_id)
     %dd
-      %pre.prettyprint= @song.album_id
+      %pre.prettyprint= @song.album.name
 
 .form-group
   = link_to t('.back', default: t("helpers.links.back")), songs_path, class: 'btn btn-default'
