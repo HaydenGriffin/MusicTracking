@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.paginate(:page => params[:page], :per_page=> 5)
+    @artists = Artist.search(params[:search]).paginate(:page => params[:page], :per_page=> 5)
   end
 
   # GET /artists/1

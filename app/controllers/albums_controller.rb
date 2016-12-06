@@ -4,7 +4,7 @@ class AlbumsController < ApplicationController
   # GET /albums
   # GET /albums.json
   def index
-    @albums = Album.paginate(:page => params[:page], :per_page=> 4)
+    @albums = Album.search(params[:search]).paginate(:page => params[:page], :per_page=> 4)
   end
 
   # GET /albums/1
