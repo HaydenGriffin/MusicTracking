@@ -39,8 +39,13 @@ h1 {
 text-transform: uppercase;
 padding-left: 10px;
 }
+
+h4 {
+padding-left:10px;
+}
 p {
 	padding-left: 20px;
+	padding-right: 20px;
 }
 
 .container {
@@ -59,7 +64,6 @@ footer {
 	text-align: center;
 }
 
-.form_error {
-	margin: auto;
-    width: 50%;
+.centre {
+	text-align: center;
 }

@@ -28,3 +28,5 @@
             = glyph 'remove'
 
 = link_to t('.new', default: t("helpers.links.new")), new_album_path, class: 'btn btn-default'
+.centre
+  = will_paginate @albums
