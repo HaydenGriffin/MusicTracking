@@ -20,4 +20,4 @@
 .form-group
   = link_to t('.back', default: t("helpers.links.back")), albums_path, class: 'btn btn-default'
   = link_to t('.edit', default: t("helpers.links.edit")), edit_album_path(@album), class: 'btn btn-default'
-  = link_to t('.destroy', default: t("helpers.links.destroy")), album_path(@album), method: "delete", data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure? Any songs within this album will also be deleted.')) }, class: 'btn btn-danger'
+  = link_to t('.destroy', default: t("helpers.links.destroy")), album_path(@album), method: "delete", data: { confirm: t('.confirm', default: t("helpers.links.confirm", default: I18n.t('delete_album')))}, class: 'btn btn-danger'

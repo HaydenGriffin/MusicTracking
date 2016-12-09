@@ -1,8 +1,8 @@
 = form_for @artist, html: { class: 'form-horizontal' } do |f|
   - if @artist.errors.any?
-    .form_error
+    .error_message
       #error_explanation
-        %h2= "#{pluralize(@artist.errors.count, "error")} prohibited this artist from being saved:"
+        %h2= t('.artist_save')
         %ul
           - @artist.errors.full_messages.each do |msg|
             %li= msg

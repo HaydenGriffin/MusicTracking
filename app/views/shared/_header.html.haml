@@ -1,13 +1,18 @@
 %nav.navbar.navbar-default
   .container-fluid
     .navbar-header
-      %a.navbar-brand{:href => "/"} Music Tracker
+      %a.navbar-brand{:href => "/"} 
+        =I18n.t('app_title')
     %ul.nav.navbar-nav
       %li
-        %a{:href => "/artists"} Artists
+        %a{:href => "/artists"}
+          =I18n.t('nav_artists')
       %li
-        %a{:href => "/albums"} Albums
+        %a{:href => "/albums"}
+          =I18n.t('nav_albums')
       %li
-        %a{:href => "/songs"} Songs
+        %a{:href => "/songs"}
+          =I18n.t('nav_songs')
       %li
-        %a{:href => "/contact"} Contact
+        %a{:href => "/contact"}
+          =I18n.t('nav_contact')

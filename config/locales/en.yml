@@ -22,6 +22,17 @@
 en:
   app_title: Music Tracker
   app_description: A place where you can keep track of all your music.
+  error_year: please enter a value between 1900 and 2017.
+  error_length: invalid. Length must be given in the form MM:SS
+  delete_album: Are you sure? Any songs within this album will also be deleted.
+  delete_artist: Are you sure? Any albums or songs in the selected album will also be deleted.
+  delete_song: Are you sure? This action cannot be undone.
+
+  footer: Hayden Griffin
+  nav_artists: Artists
+  nav_albums: Albums
+  nav_songs: Songs
+  nav_contact: Contact
 
   home:
     home:
@@ -32,7 +43,6 @@ en:
     contact:
       title: Contact us
       contact_us: Complete the following form to get in touch with us.
-
       name: "Name:"
       enter_name: Enter your name
       email: "Email:"
@@ -49,3 +59,45 @@ en:
       no_number: You must supply a phone number.
       no_message: You must supply a message.
       message_sent: Thank you. We will be in touch shortly.
+
+  albums:
+    index:
+      artwork: Artwork
+      artist: Artist
+      album: Album
+      songs: Songs
+      year: Year
+    form:
+      album_save: The following errors prohibited the album from being saved
+
+
+  artists:
+    index:
+      artist: Artist
+      albums: Albums
+      genre: Genre
+      start: Start
+      bio: Bio
+    form:
+      artist_save: The following errors prohibited the artist from being saved
+
+  
+  songs:
+    index:
+      name: Name
+      album: Album
+      track: Track
+      length: Length
+    form:
+      song_save: The following errors prohibited the song from being saved
+
+
+  search: Search
+
+activemodel:
+  errors:
+    models:
+      artists:
+        attributes:
+          start:
+            error_start: Please enter a year value between 1900 and 2017.
