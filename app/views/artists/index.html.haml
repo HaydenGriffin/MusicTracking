@@ -21,7 +21,7 @@
     - @artists.each do |artist|
       %tr
         %td= artist.name
-        %td= artist.albums.map(&:name).join(",<br>").html_safe
+        %td= artist.albums.map(&:name).join(",<br>").html_safe # Lists all of the albums created by each artist, and links each album with a html new line
         %td= artist.genre
         %td= artist.start
         %td= artist.bio

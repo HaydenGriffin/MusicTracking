@@ -15,7 +15,7 @@
       %th= t('.artist')
       %th= t('.album')
       %th= t('.songs')
-      %th= model_class.human_attribute_name(:year)
+      %th= t('.year')
       %th=t '.actions', default: t("helpers.actions")
   %tbody
     - @albums.each do |album|
@@ -23,7 +23,7 @@
         %td= image_tag album.artwork.url(:thumb), class: 'image'
         %td= album.artist.name
         %td= album.name
-        %td= album.songs.map(&:name).join(",<br>").html_safe
+        %td= album.songs.map(&:name).join(",<br>").html_safe # Lists all of the songs contained within the album, and joins each song with a html new line
         %td= album.year
         %td
           = link_to album_path(album), class: 'btn btn-xs' do
@@ -37,6 +37,7 @@
 .centre
   = will_paginate @albums
 
+-# Javascript to scale the size of the album art when hovered over
 :javascript
   $(document).ready(function() {
     $(".image").hover(function() {

@@ -13,6 +13,9 @@
     %dt.label.label-default= model_class.human_attribute_name(:genre)
     %dd
       %pre.prettyprint= @artist.genre
+    %dt.label.label-default= model_class.human_attribute_name(:albums)
+    %dd
+      %pre.prettyprint= @artist.albums.map(&:name).join(", ").html_safe # Retrieves all of the albums created by the artist being shown, joined by a space
     %dt.label.label-default= model_class.human_attribute_name(:bio)
     %dd
       %pre.prettyprint= @artist.bio

@@ -10,12 +10,15 @@
     %dt.label.label-default= model_class.human_attribute_name(:name)
     %dd
       %pre.prettyprint= @album.name
-    %dt.label.label-default= model_class.human_attribute_name(:year)
-    %dd
-      %pre.prettyprint= @album.year
     %dt.label.label-default= model_class.human_attribute_name(:artist_id)
     %dd
       %pre.prettyprint= @album.artist.name
+    %dt.label.label-default= model_class.human_attribute_name(:songs)
+    %dd
+      %pre.prettyprint= @album.songs.map(&:name).join(", ").html_safe # Retrieves all of the songs within the album being shown
+    %dt.label.label-default= model_class.human_attribute_name(:year)
+    %dd
+      %pre.prettyprint= @album.year
 
 .form-group
   = link_to t('.back', default: t("helpers.links.back")), albums_path, class: 'btn btn-default'

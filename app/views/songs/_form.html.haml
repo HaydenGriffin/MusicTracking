@@ -10,7 +10,7 @@
   .form-group
     = f.label :album_id, class: 'control-label col-md-2'
     .col-md-8
-      = f.collection_select :album_id, Album.all, :id, :name, class: 'dropdown-menu col-md-2'
+      = f.collection_select :album_id, Album.all, :id, :name, class: 'dropdown-menu col-md-2' # Dropdown selection box of all the albums available to add a song to
   .form-group
     = f.label :name, class: 'control-label col-md-2'
     .col-md-8
