@@ -1,3 +1,12 @@
 %h1= t('.title')
 %h4= t('.welcome')
-%p= t('.description')
+%p#app_description= t('.description')
+
+= submit_tag t('.show'), name: nil, id: 'button', class: 'btn btn-default'
+
+:javascript
+  $(document).ready(function() {
+    $('#button').click(function() {
+      $('#app_description').toggle(1000);
+    });
+  });

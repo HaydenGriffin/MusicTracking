@@ -1,18 +1,18 @@
 %nav.navbar.navbar-default
   .container-fluid
     .navbar-header
-      %a.navbar-brand{:href => "/"} 
-        =I18n.t('app_title')
+      = link_to t('app_title'), root_path, id: 'title', class: 'navbar-brand'
     %ul.nav.navbar-nav
-      %li
-        %a{:href => "/artists"}
-          =I18n.t('nav_artists')
-      %li
-        %a{:href => "/albums"}
-          =I18n.t('nav_albums')
-      %li
-        %a{:href => "/songs"}
-          =I18n.t('nav_songs')
-      %li
-        %a{:href => "/contact"}
-          =I18n.t('nav_contact')
+      %li= link_to t('nav_artists'), artists_path
+      %li= link_to t('nav_albums'), albums_path
+      %li= link_to t('nav_songs'), songs_path
+      %li= link_to t('nav_contact'), contact_path
+
+:javascript
+  $(document).ready(function() {
+    $('#title').hover(function() {
+      $(this).fadeTo("fast", 1.0);
+    }, function() {
+      $(this).fadeTo("fast", 0.7);
+    });
+  });

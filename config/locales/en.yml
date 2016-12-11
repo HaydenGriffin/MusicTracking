@@ -39,6 +39,7 @@ en:
       title: Track Your Music
       welcome: This is the space to track your music with style.
       description: To get started, go to the Artists page using the navigation and begin adding your own Artists to the system. From there, you can add albums that they have produced from the Albums page, and then add songs that are contained within those albums from the Songs page.
+      show: Toggle Show
 
     contact:
       title: Contact us

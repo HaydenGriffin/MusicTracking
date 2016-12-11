@@ -20,7 +20,7 @@
   %tbody
     - @albums.each do |album|
       %tr
-        %td= image_tag album.artwork.url(:thumb)
+        %td= image_tag album.artwork.url(:thumb), class: 'image'
         %td= album.artist.name
         %td= album.name
         %td= album.songs.map(&:name).join(",<br>").html_safe
@@ -36,3 +36,18 @@
 = link_to t('.new', default: t("helpers.links.new")), new_album_path, class: 'btn btn-default'
 .centre
   = will_paginate @albums
+
+:javascript
+  $(document).ready(function() {
+    $(".image").hover(function() {
+      $(this).animate({
+            height: '250px',
+            width: '250px'
+        });
+    }, function() {
+       $(this).animate({
+            height: '150px',
+            width: '150px'
+        });
+    });
+  });
