@@ -8,6 +8,13 @@ class ArtistTest < ActiveSupport::TestCase
 		refute artist.valid?
 	end
 
+	test 'should not save artist no name' do
+		artist = Artist.new
+		artist.start = 2000
+		artist.save
+		refute artist.valid?
+	end
+
 	test 'should not save artist invalid year' do
 		artist = Artist.new
 		artist.name = 'Artist 1'

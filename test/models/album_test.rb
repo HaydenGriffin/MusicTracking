@@ -12,12 +12,20 @@ class AlbumTest < ActiveSupport::TestCase
 		refute album.valid?
 	end
 
+	test 'should not save album no name' do
+		album = Album.new
+		album.artist = @artist
+		album.year = 2000
+		album.save
+		refute album.valid?
+	end
+
 	test 'should not save album invalid year' do
 		album = Album.new
-		album.save
 		album.name = 'Dark Side of The Moon'
 		album.artist = @artist
 		album.year = 1800
+		album.save
 		refute album.valid?
 	end
 
